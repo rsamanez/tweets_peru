@@ -15,8 +15,12 @@ To change the list of Tweets Users change this Array
 ```
 tweet_users := []string{"rmapalacios","larepublica_pe","canalN_","diariocorreo","policiaperu","Minsa_Peru","JulianaOxenford","elcomercio_peru","MininterPeru","peru21noticias","pcmperu"}
 ```
+finally a CSV file is created with the tweets info
+```
+result.csv
+```
 
-finally
+To create the Bin file
 ```
 go build main.go
 ```
