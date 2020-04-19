@@ -11,6 +11,11 @@ func main() {
     createdb()
     os.Exit(0)
 ```
+To change the list of Tweets Users change this Attay
+```
+tweet_users := []string{"rmapalacios","larepublica_pe","canalN_","diariocorreo","policiaperu","Minsa_Peru","JulianaOxenford","elcomercio_peru","MininterPeru","peru21noticias","pcmperu"}
+```
+
 finally
 ```
 go build main.go
