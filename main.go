@@ -112,6 +112,7 @@ func main() {
     statement, _ := database.Prepare("INSERT INTO tweets (tweet_user, " +
         "tweet_id, hashtags, html, ispin, isretweet, likes, replies, retweets, body, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
     for _, tweet_user := range tweet_users {
+        fmt.Println(" ")
         fmt.Println(tweet_user)
         for tweet := range twitterscraper.GetTweets(tweet_user, 25) {
             if tweet.Error != nil {
@@ -133,7 +134,7 @@ func main() {
     }
 
     if checkLastRowSend(database) {
-        fmt.Print("Prepare to send new CSV to SumUp")
+        fmt.Println("Prepare to send new CSV to SumUp")
     }else{
         fmt.Println("Nothing to Update")
     }
